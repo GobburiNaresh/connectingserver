@@ -16,6 +16,9 @@ const AddMovie = (props) => {
             releaseDate: dateRef.current.value
         }
         props.onAddMovie(movie);
+        titleRef.current.value = '';
+        textRef.current.value = '';
+        dateRef.current.value = '';
     }
     return(
         <form onSubmit={formSubmitHandler}>
